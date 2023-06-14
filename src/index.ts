@@ -71,3 +71,38 @@ let filterByGender = (arr: Person[]): Person[] => {
 
 let result3 = filterByGender(people)
 console.log(result3)
+
+
+function filter<T>(arr: T[], compareFunction: (elem: T) => boolean): T[] {
+  let result: T[] = []
+
+  let index = 0
+  while (arr[index] !== undefined) {
+    let shouldAdd = compareFunction(arr[index])
+    if (shouldAdd) {
+      result = [ ...result, arr[index] ]
+    }
+    index += 1
+  }
+
+  return result
+}
+
+let result4 = filter(words, word => word[0] === "b")
+console.log(result4)
+
+let result5 = filter(numbers, num => num > 9)
+console.log(result5);
+
+let result6 = filter(people, person => person["gender"] === "female")
+console.log(result6);
+
+let result7 = words.filter(word => word[0] === "b")
+console.log(result4)
+
+let result8 = numbers.filter(num => num > 9)
+console.log(result5);
+
+let result9 = people.filter(person => person["gender"] === "female")
+console.log(result6);
+
