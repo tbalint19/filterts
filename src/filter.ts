@@ -106,3 +106,4 @@ console.log(result5);
 let result9 = people.filter(person => person["gender"] === "female")
 console.log(result6);
 
+export default filter
