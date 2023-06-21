@@ -56,7 +56,7 @@ const toBalance = (arr: Account[]): number[] => {
   return result
 }
 
-const convert = <IT, OT>(arr: IT[], convertFunction: (elem: IT) => OT): OT[] => {
+export const convert = <IT, OT>(arr: IT[], convertFunction: (elem: IT) => OT): OT[] => {
 
   let result : OT[] = []
 
