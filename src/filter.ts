@@ -73,7 +73,7 @@ let result3 = filterByGender(people)
 console.log(result3)
 
 
-function filter<T>(arr: T[], compareFunction: (elem: T) => boolean): T[] {
+export function filter<T>(arr: T[], compareFunction: (elem: T) => boolean): T[] {
   let result: T[] = []
 
   let index = 0
